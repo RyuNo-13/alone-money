@@ -1,18 +1,9 @@
-// 'use client'
-import React from "react";
-import { useRouter } from "next/router";
+import React from 'react'
 
-const page = async ({ params }: { params: { id: string } }) => {
-  const id = parseInt(await params.id);
-  // const { id } = await params;
-  // console.log({id});
-
-  return (
-    <div>
-  <div>質問: {id}</div>
-  <button>次の質問へ</button>
-  </div>
-  );
-};
-
-export default page;
+export default async function Page ({ params }: { params: { id: string } })  {
+    const { id } = await params;  // `await`で非同期の解決
+    console.log(id);
+    return (
+        <div>質問: {id}</div>
+    );
+}
