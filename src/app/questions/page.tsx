@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>スタートページ</div>
+    <div>質問ページ</div>
   )
 }
 
