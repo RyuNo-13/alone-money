@@ -10,8 +10,8 @@
 "use client";
 import React from 'react'
 import { useParams } from 'next/navigation';
-import QuestionPage from  '../../components/NextQuestionButton';
-import PreviousQuestionPage from  '../../components/PreviousQuestionButton';
+import QuestionPage from  '../../../components/NextQuestionButton';
+import PreviousQuestionPage from  '../../../components/PreviousQuestionButton';
 
 const page = () => {
   const {id} = useParams();
