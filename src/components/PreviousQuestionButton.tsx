@@ -17,9 +17,9 @@ export default function PreviousQuestionPage() {
       {/* if({currentQuestionId >= 2 && currentQuestionId <= 7}) {
         <button onClick={handlePrevious}>前の質問</button>
       } */}
-      {Number(currentQuestionId) >= 2 && Number(currentQuestionId) <= 7 ? (
-        <button onClick={handlePrevious}>前の質問</button>
-      ) : null}
+      {currentQuestionId === 1 ? (
+        <button onClick={() => router.push('/')}>ホームに戻る</button>
+      ) : <button onClick={handlePrevious}>前の質問</button>}
     </div>
   );
 }

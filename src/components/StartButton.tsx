@@ -1,8 +1,9 @@
-// src/app/start/page.tsx
 "use client";
 import { useRouter } from "next/navigation";
+import React from "react";
+import "../styles/StartPage.css";
 
-export default function StartPage() {
+export default function StartButton() {
   const router = useRouter();
 
   const handleStart = () => {
@@ -10,9 +11,8 @@ export default function StartPage() {
   };
 
   return (
-    <div>
-      <h1>スタートページ</h1>
-      <button onClick={handleStart}>質問を始める</button>
-    </div>
+    <button type="button" onClick={handleStart} className="startButton">
+      スタート
+    </button>
   );
 }

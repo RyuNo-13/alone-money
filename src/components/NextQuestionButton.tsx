@@ -32,9 +32,9 @@ export default function QuestionPage() {
   return (
     <div>
      
-      {currentQuestionId < 7 ? (
+      {currentQuestionId < 5 ? (
         <button onClick={handleNext}>次の質問</button>
-      ) : (
+      ) : ( 
         <button onClick={() => router.push('/result')}>結果ページへ</button>
       )}
     </div>

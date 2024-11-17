@@ -1,0 +1,49 @@
+.startPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+.startContainer {
+  background-color: aqua;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  width: 500px;
+  gap: 10px;
+  padding: 0px 40px;
+}
+.startContainer h1 {
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+}
+
+.tb_bettwen {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.startButton {
+  padding: 10px 0;
+  width: 250px;
+  border: none;
+  color: #27acd9;
+  border: 2px solid #27acd9;
+  background-color: white;
+  border-radius: 100vh;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.startButton:hover{
+  color: white;
+  background-color: #27acd9;
+}
+
