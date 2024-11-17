@@ -7,17 +7,18 @@ import { questions } from "@/data/question";
 const ResultPage: React.FC = () => {
   const { answers } = useAnswer();
 
+  // 金額の合計値を計算
   const calculateTotal = () => {
     let total = 0;
     Object.values(answers).forEach((questionAnswers) => {
       Object.values(questionAnswers).forEach((value) => {
-        total += value; // 各回答の値を合計
+        total += value; 
       });
     });
     return total;
   };
 
-  const total = calculateTotal(); // 合計を計算
+  const total = calculateTotal(); 
 
   return (
     <div>
