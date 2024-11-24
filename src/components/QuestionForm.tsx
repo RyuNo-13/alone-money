@@ -1,7 +1,7 @@
 import { Question } from "@/data/question";
 import { BsHouseFill, BsInfoCircle } from "react-icons/bs";
 import { FaBolt, FaUtensils, FaWifi, FaShoppingBasket, FaWallet } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type QuestionFormProps = {
   question: Question;
@@ -11,6 +11,7 @@ type QuestionFormProps = {
 
 const QuestionForm: React.FC<QuestionFormProps> = ({ question, answers, onAnswerChange }) => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [localValues, setLocalValues] = useState<Record<string, string>>({});
 
   const getIcon = (questionId: string) => {
     const icons = {
@@ -23,6 +24,23 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ question, answers, onAnswer
     };
     return icons[questionId as keyof typeof icons] || null;
   };
+
+  const handleInputChange = (item: string, value: string) => {
+    setLocalValues(prev => ({
+      ...prev,
+      [item]: value
+    }));
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      Object.entries(localValues).forEach(([item, value]) => {
+        onAnswerChange(item, value);
+      });
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [localValues, onAnswerChange]);
 
   return (
     <div className="flex flex-col items-center">
@@ -64,8 +82,8 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ question, answers, onAnswer
               <input 
                 type="number" 
                 placeholder="10000" 
-                value={answers[question.id]?.[item] || ""} 
-                onChange={(e) => onAnswerChange(item, e.target.value)}
+                value={localValues[item] || answers[question.id]?.[item] || ""} 
+                onChange={(e) => handleInputChange(item, e.target.value)}
                 className="w-40 p-3 text-xl font-medium border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#27acd9] focus:border-transparent"
               />
               <span className="text-lg text-gray-600 font-medium">円</span>
