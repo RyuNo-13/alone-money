@@ -2,6 +2,14 @@
 // 共通のHTML文を作る
 
 import { AnswerProvider } from "./context/AnswerContext";
+import "@/styles/globals.css";
+import { Noto_Sans_JP } from 'next/font/google';
+
+const notoSansJP = Noto_Sans_JP({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: "Next.js",
@@ -15,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="jp">
-      <body>
+      <body className={notoSansJP.className}>
         <AnswerProvider>{children}</AnswerProvider>
       </body>
     </html>

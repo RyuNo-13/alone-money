@@ -20,15 +20,15 @@ export const NavigationButton: React.FC<NavigationButtonProps> = ({
 
   if (type === 'next') {
     return currentQuestionId < maxQuestions ? (
-      <button onClick={handleClick}>次の質問</button>
+      <button className="nav-button" onClick={handleClick}>次の質問</button>
     ) : (
-      <button onClick={() => onNavigate(-1)}>結果ページへ</button>
+      <button className="nav-button" onClick={() => onNavigate(-1)}>結果ページへ</button>
     );
   }
 
   return currentQuestionId === 1 ? (
-    <button onClick={() => onNavigate(0)}>ホームに戻る</button>
+    <button className="nav-button" onClick={() => onNavigate(0)}>ホームに戻る</button>
   ) : (
-    <button onClick={handleClick}>前の質問</button>
+    <button className="nav-button" onClick={handleClick}>前の質問</button>
   );
 }; 

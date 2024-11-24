@@ -13,7 +13,6 @@ const Page: React.FC = () => {
   if (!id) return <div>読み込み中...</div>;
 
   const question = questions.find((qs) => qs.id === id);
-  console.log(question);
   if (!question) return <div>質問が見つかりません。</div>;
 
   const handleChange = (item: string, value: string) => {
@@ -22,13 +21,13 @@ const Page: React.FC = () => {
   };
 
   return (
-    <div>
-      <QuestionForm
-        question={question}
-        answers={answers}
-        onAnswerChange={handleChange}
-      />
-      <div>
+    <div className="min-h-screen w-full bg-gradient-to-b from-[#27acd9]/10 to-white flex items-center justify-center p-4">
+      <div className="w-full max-w-2xl bg-white rounded-3xl shadow-2xl p-8">
+        <QuestionForm
+          question={question}
+          answers={answers}
+          onAnswerChange={handleChange}
+        />
         <QuestionNavigation />
       </div>
     </div>
