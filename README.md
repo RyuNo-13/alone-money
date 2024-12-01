@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## サービス名
+1人暮らしシュミレーション
+## ◆アプリURL
+以下のリンクからお試しいただけます
 
-## Getting Started
+👉1人暮らしシュミレーションを試す（https://alone-money.vercel.app/）
 
-First, run the development server:
+## ◆サービスの概要・開発した背景
+**◯きっかけ**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+ReactとTypeScriptをUdemyで学習していたが身についた感じがしなかった。
+個人開発したらできるところと出来ないところが分かるだろうと思い作成を始めてみた。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**◯なぜ、1人暮らしのシュミレーションなのか**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+どんなものを作ろうかと考えたとき、サービスを作るなら作成したサービスが1人でも満足してくれるものがいいなと思っていた。
+そこで、思いついたのが「**１人暮らしシュミレーション**」であった。
+1人暮らしを初めて、6年ぐらい経ちそうなのだが、初めて1人暮らしをするとき1か月どれくらいの費用がかかるのか正直分からず親に任せきりだった。
+1人暮らしを始めたいけど、中々前に進めない人の中には、**1人暮らしをするとどれくらい費用が掛かるのか分からない**ことが1つの要因だと思ってた。
+（実際何度か、1人暮らしにどれくらいかかるか友達とかに教えたことがあり、やっぱり費用のところは気になるよなと思った）
+そこで、自分の体験をもとにどれくらいの費用が掛かるのかを簡単にシュミレーションできるように作成しました。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## ◆画面一覧
 
-To learn more about Next.js, take a look at the following resources:
+## ◆使用技術
+・React v19
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+・Next.js v15
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+・TypeScript
 
-## Deploy on Vercel
+・TailwindCSS
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+・vercel（デプロイ時に使用）
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 今後の展望
+・初めて作ったサービスのため、コードがぐちゃぐちゃだと思うためリファクタリングしていきたい
+
+　→気づいたことや修正箇所を見つけて頂いたらアドバイスいただきたい
+ 
+・DBを使用してユーザーの入力を保持したい
+
+　→Google認証などで管理していきたい
+
+・1ヶ月にかかる費用だけでなく、**初期費用**をシュミレーションできる機能を追加したい
