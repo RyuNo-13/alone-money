@@ -24,11 +24,11 @@ ReactとTypeScriptをUdemyで学習していたが身についた感じがしな
 ## ◆画面一覧
 <div style="display: flex; gap:20px; flex-wrap:wrap;">
     <h3>スタート画面</h3>
-    <img src="https://github.com/user-attachments/assets/17edb39e-adeb-4545-8536-62616c5950cc" alt="" width="500">
-    <img src="https://github.com/user-attachments/assets/db67ca14-3ef0-486f-b984-36b0c70df4af" alt="" width="500">
+    <img src="https://github.com/user-attachments/assets/17edb39e-adeb-4545-8536-62616c5950cc" alt="" width="300">
+    <img src="https://github.com/user-attachments/assets/db67ca14-3ef0-486f-b984-36b0c70df4af" alt="" width="300">
     <h3>入力・結果画面</h3>
-    <img src="https://github.com/user-attachments/assets/2db7938e-2af2-4abc-bee5-b9f1cb710aec" alt="" width="500">
-    <img src="https://github.com/user-attachments/assets/90b5453a-3c0d-46ae-9a6b-731b540f9664" alt="" width="500">
+    <img src="https://github.com/user-attachments/assets/2db7938e-2af2-4abc-bee5-b9f1cb710aec" alt="" width="300">
+    <img src="https://github.com/user-attachments/assets/90b5453a-3c0d-46ae-9a6b-731b540f9664" alt="" width="300">
 </div>
 
 
