@@ -1,5 +1,6 @@
 ## サービス名
-1人暮らしシュミレーション
+<img alt="サンプル画像" src="https://github.com/user-attachments/assets/1780293b-4ad0-4a94-964b-64aaa6512ab7" width="700">
+
 ## ◆アプリURL
 以下のリンクからお試しいただけます
 
@@ -20,8 +21,16 @@ ReactとTypeScriptをUdemyで学習していたが身についた感じがしな
 （実際何度か、1人暮らしにどれくらいかかるか友達とかに教えたことがあり、やっぱり費用のところは気になるよなと思った）
 そこで、自分の体験をもとにどれくらいの費用が掛かるのかを簡単にシュミレーションできるように作成しました。
 
-
 ## ◆画面一覧
+<div style="display: flex; gap:20px; flex-wrap:wrap;">
+    <h3>スタート画面</h3>
+    <img src="https://github.com/user-attachments/assets/17edb39e-adeb-4545-8536-62616c5950cc" alt="" width="500">
+    <img src="https://github.com/user-attachments/assets/db67ca14-3ef0-486f-b984-36b0c70df4af" alt="" width="500">
+    <h3>入力・結果画面</h3>
+    <img src="https://github.com/user-attachments/assets/2db7938e-2af2-4abc-bee5-b9f1cb710aec" alt="" width="500">
+    <img src="https://github.com/user-attachments/assets/90b5453a-3c0d-46ae-9a6b-731b540f9664" alt="" width="500">
+</div>
+
 
 ## ◆使用技術
 ・React v19
