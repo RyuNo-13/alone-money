@@ -26,9 +26,10 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ question, answers, onAnswer
   };
 
   const handleInputChange = (item: string, value: string) => {
+    const sanitizedValue = value.replace(/[^\d]/g, '');
     setLocalValues(prev => ({
       ...prev,
-      [item]: value
+      [item]: sanitizedValue
     }));
   };
 
@@ -81,9 +82,17 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ question, answers, onAnswer
             <div className="flex items-center gap-3">
               <input 
                 type="number" 
+                inputMode="numeric"
+                pattern="[0-9]*"
                 placeholder="10000" 
                 value={localValues[item] || answers[question.id]?.[item] || ""} 
                 onChange={(e) => handleInputChange(item, e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    (e.target as HTMLInputElement).blur();
+                  }
+                }}
                 className="w-40 p-3 text-xl font-medium border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#27acd9] focus:border-transparent"
               />
               <span className="text-lg text-gray-600 font-medium">円</span>
